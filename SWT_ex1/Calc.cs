@@ -48,6 +48,14 @@ namespace SWtest_calculator_EX
             return result;
         }
 
+        public double Power( double exp)
+        {
+            double result = 0;
+            Accumulator = Math.Pow(Accumulator, exp);
+
+            return Accumulator;
+        }
+
 
         public double Accumulator { get; private set; }
 
@@ -55,6 +63,13 @@ namespace SWtest_calculator_EX
         {
             return dividend / divisor;
         }
+        public  double Divide( double divisor)
+        {
+            Accumulator = Accumulator / divisor;
+            return Accumulator;
+        }
+
+
 
         public void Clear()
         {

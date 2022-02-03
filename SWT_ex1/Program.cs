@@ -22,6 +22,7 @@ namespace SWtest_calculator_EX
 
             double result = CalcOne.Add(a, b);
             Console.WriteLine("Result is: {0}", result);
+            Console.WriteLine("Accumulator is {0}", CalcOne.Accumulator);
 
 
 

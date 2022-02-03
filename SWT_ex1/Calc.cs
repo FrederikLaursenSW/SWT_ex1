@@ -56,9 +56,9 @@ namespace SWtest_calculator_EX
             return dividend / divisor;
         }
 
-        public Void Clear()
+        public void Clear()
         {
-            return dividend / divisor;
+            Accumulator=0;
         }
 
 

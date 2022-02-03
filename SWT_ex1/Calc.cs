@@ -32,6 +32,11 @@ namespace SWtest_calculator_EX
         }
 
 
+        public double Divide(double dividend, double divisor)
+        {
+            return dividend / divisor;
+        }
+
 
     }
 }

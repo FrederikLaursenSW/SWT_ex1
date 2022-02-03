@@ -49,12 +49,14 @@ namespace SWtest_calculator_EX
         }
 
 
+        public double Accumulator { get; private set; }
+
         public double Divide(double dividend, double divisor)
         {
             return dividend / divisor;
         }
 
-        public double Accumulator { get; private set; }
+
 
     }
 }

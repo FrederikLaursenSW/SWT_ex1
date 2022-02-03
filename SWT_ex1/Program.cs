@@ -12,6 +12,7 @@ namespace SWtest_calculator_EX
             Calc CalcOne = new Calc();
 
             //Add test
+            Console.WriteLine("Input 2 numbers, you dumb bitch!");
 
             string userinput1 = Console.ReadLine();
             string userinput2 = Console.ReadLine();

@@ -37,6 +37,10 @@ namespace SWtest_calculator_EX
             return dividend / divisor;
         }
 
+        public Void Clear()
+        {
+            return dividend / divisor;
+        }
 
     }
 }

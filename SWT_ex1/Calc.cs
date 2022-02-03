@@ -21,6 +21,13 @@ namespace SWtest_calculator_EX
             return result;
         }
 
+        public double Add(double addend)
+        {
+            Accumulator+= addend;
+
+            return Accumulator;
+        }
+
         public double Subtract(double a, double b)
         {
             double result = 0;

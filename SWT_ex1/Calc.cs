@@ -6,6 +6,7 @@ namespace SWtest_calculator_EX
 
     public class Calc
     {
+     
 
         public Calc()
         {
@@ -13,25 +14,41 @@ namespace SWtest_calculator_EX
 
         public double Add(double a, double b)
         {
-            return a + b;
+            double result = 0;
+            result = a + b;
+
+            Accumulator = result;
+            return result;
         }
 
         public double Subtract(double a, double b)
         {
-            return a - b;
+            double result = 0;
+            result = a - b;
+            Accumulator = result;
+
+            return result;
         }
 
         public double Multipli(double a, double b)
-        {
-            return a * b;
+        { 
+            double result = 0;
+            result = a * b;
+
+            Accumulator = result;
+            return result;
         }
 
         public double Power(double x, double exp)
         {
-            return Math.Pow(x, exp);
+            double result = 0;
+            result = Math.Pow(x, exp);
+
+            Accumulator = result;
+            return result;
         }
 
-
+        public double Accumulator { get; private set; }
 
     }
 }

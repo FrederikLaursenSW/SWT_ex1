@@ -30,6 +30,8 @@ namespace test
         }
 
         [TestCase(-3, -5, -8)]
+        [TestCase(-10, -5, -25)]
+
         public void negativeNumbers(int a, int b, int c)
         {
             //act

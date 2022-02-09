@@ -34,7 +34,8 @@ namespace SWtest_calculator_EX
             result = a - b;
             Accumulator = result;
 
-            return result;
+            return result;  
+            //test
         }
 
         public double Multipli(double a, double b)

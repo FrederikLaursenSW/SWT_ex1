@@ -44,6 +44,7 @@ namespace SWtest_calculator_EX
 
             Accumulator = result;
             return result;
+            //test
         }
 
         public double Power(double x, double exp)

@@ -14,20 +14,29 @@ namespace test
             testCalc = new Calc();
         }
 
-        [Test]
-        public void positiveNumbers()
+        [TestCase(13,22,35)]
+        [TestCase(2, 3, 5)]
+        [TestCase(7, 11, 18)]
+        public void positiveNumbers(int a, int b, int c)
         {
 
-
-
             //act
-            double res = testCalc.Add(22, 13);
+            double res = testCalc.Add(a, b);
 
 
             //Assert
-            Assert.That(res, Is.EqualTo(35));
+            Assert.That(res, Is.EqualTo(c));
 
+        }
 
+        [TestCase(-3, -5, -8)]
+        public void negativeNumbers(int a, int b, int c)
+        {
+            //act
+            double res = testCalc.Add(a, b);
+
+            //Assert
+            Assert.That(res, Is.EqualTo(c));
 
         }
     }

@@ -63,7 +63,6 @@ namespace test
         public void multiply_TwoNumbers_returnResult(int a, int b, int c)
         {
             //act
-          //  double res1 = Multiply(double a, double b);
 
           double res1 = testCalc.Multiply(a, b);
 
@@ -72,7 +71,19 @@ namespace test
 
         }
 
+        [TestCase(10, 5, 5)]
+        [TestCase(7, 17, -10)]
+        [TestCase(-4, -5, 1)]
 
+        public void subtract_oneNumberFromAnother_returnSum(int a, int b, int c)
+        {
+            //act
+            double res = testCalc.Subtract(a, b);
+
+            //Assert
+            Assert.That(testCalc.Accumulator, Is.EqualTo(c));
+
+        }
 
 
     }

@@ -31,6 +31,7 @@ namespace test
 
         [TestCase(-3, -5, -8)]
         [TestCase(-10, -5, -15)]
+        [TestCase(-7, -10, -17)]
 
         public void negativeNumbers(int a, int b, int c)
         {
@@ -41,5 +42,21 @@ namespace test
             Assert.That(res, Is.EqualTo(c));
 
         }
+
+        [TestCase(5, 7, 12)]
+        [TestCase(12, 10, 22)]
+        [TestCase(-5, 10, 5)]
+        public void addToResult(int a, int b, int c)
+        {
+            //act
+            double res1 = testCalc.Add(a);
+
+            double res2 = testCalc.Add(b);
+
+            //Assert
+            Assert.That(testCalc.Accumulator, Is.EqualTo(c));
+
+        }
+
     }
 }

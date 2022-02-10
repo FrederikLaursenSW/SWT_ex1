@@ -56,5 +56,24 @@ namespace test
 
         }
 
+
+        [TestCase(5, 5, 25)]
+        [TestCase(-12, -10, 120)]
+        [TestCase(-5, 10, -50)]
+        public void multiply_TwoNumbers_returnResult(int a, int b, int c)
+        {
+            //act
+          //  double res1 = Multiply(double a, double b);
+
+          double res1 = testCalc.Multiply(a, b);
+
+          //Assert
+            Assert.That(testCalc.Accumulator, Is.EqualTo(c));
+
+        }
+
+
+
+
     }
 }

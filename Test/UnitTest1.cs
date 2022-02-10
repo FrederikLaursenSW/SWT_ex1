@@ -16,6 +16,9 @@ namespace test
         }
 
         [TestCase(10, 0)]
+        [TestCase(1000, 0)]
+        [TestCase(-9, 0)]
+
         public void divide_divideByZero_returnThrows(int a, int b)
         {
             //Assert

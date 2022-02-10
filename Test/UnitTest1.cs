@@ -103,5 +103,20 @@ namespace test
             //Assert
             Assert.That(testCalc.Accumulator, Is.EqualTo(c));
         }
+
+        [TestCase(2, 4)]
+        [TestCase(3, 27)]
+        [TestCase(4, 256)]
+
+        public void power_factorAccumulatorWithA_returnResult(int a, double b)
+        {
+            //act
+            double res1 = testCalc.Add(a);
+
+            double res2 = testCalc.Power(a);
+
+            //Assert
+            Assert.That(testCalc.Accumulator, Is.EqualTo(b));
+        }
     }
 }

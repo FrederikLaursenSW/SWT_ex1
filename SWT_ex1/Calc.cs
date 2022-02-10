@@ -14,11 +14,9 @@ namespace SWtest_calculator_EX
 
         public double Add(double a, double b)
         {
-            double result = 0;
-            result = a + b;
+            Accumulator = a + b;
 
-            Accumulator = result;
-            return result;
+            return Accumulator;
         }
 
         public double Add(double addend)
@@ -30,35 +28,27 @@ namespace SWtest_calculator_EX
 
         public double Subtract(double a, double b)
         {
-            double result = 0;
-            result = a - b;
-            Accumulator = result;
+            Accumulator = a - b;
 
-            return result;  
+            return Accumulator;  
         }
 
         public double Multiply(double a, double b)
-        { 
-            double result = 0;
-            result = a * b;
+        {
+            Accumulator = a * b;
 
-            Accumulator = result;
-            return result;
-       
+            return Accumulator;
         }
 
         public double Power(double x, double exp)
         {
-            double result = 0;
-            result = Math.Pow(x, exp);
+            Accumulator = Math.Pow(x, exp);
 
-            Accumulator = result;
-            return result;
+            return Accumulator;
         }
 
         public double Power( double exp)
         {
-            double result = 0;
             Accumulator = Math.Pow(Accumulator, exp);
 
             return Accumulator;
@@ -69,15 +59,16 @@ namespace SWtest_calculator_EX
 
         public double Divide(double dividend, double divisor)
         {
-            return dividend / divisor;
+            Accumulator = dividend / divisor;
+
+            return Accumulator;
         }
         public  double Divide( double divisor)
         {
             Accumulator = Accumulator / divisor;
+
             return Accumulator;
         }
-
-
 
         public void Clear()
         {

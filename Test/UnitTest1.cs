@@ -29,7 +29,7 @@ namespace test
         [TestCase(4, 2, 2)]
         [TestCase(3, 6, 0.5)]
         [TestCase(-4, 2, -2)]
-        public void divide_AccumolatorWithOneNumber_returnSum(int a, int b, double c)
+        public void divide_AccumulatorWithOneNumber_returnSum(int a, int b, double c)
         {
             //act
             testCalc.Add(a);

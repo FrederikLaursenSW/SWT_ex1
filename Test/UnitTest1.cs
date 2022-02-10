@@ -26,6 +26,19 @@ namespace test
             Assert.That(res, Is.EqualTo(c));
         }
 
+        [TestCase(4, 2, 2)]
+        [TestCase(3, 6, 0.5)]
+        [TestCase(-4, 2, -2)]
+        public void divide_AccumolatorWithOneNumber_returnSum(int a, int b, double c)
+        {
+            //act
+            testCalc.Add(a);
+            double res = testCalc.Divide(b);
+
+            //Assert
+            Assert.That(res, Is.EqualTo(c));
+        }
+
         [TestCase(13,22,35)]
         [TestCase(2, 3, 5)]
         [TestCase(-10, -5, -15)]

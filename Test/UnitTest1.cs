@@ -85,19 +85,19 @@ namespace test
         public void clear_resetAccumulator_returnZero()
         {
             //act
-            double res = testCalc.Clear();
+            //double res = testCalc.Clear();
 
             //Assert
-            Assert.That(testCalc.Accumulator, Is.EqualTo(c));
+            //Assert.That(testCalc.Accumulator, Is.EqualTo(c));
         }
 
-        [TestCase(10, 5, 5)]
-        [TestCase(7, 17, -10)]
-        [TestCase(-4, -5, 1)]
-        public void power_factorAwithB_returnResult()
+        [TestCase(2, 2, 4)]
+        [TestCase(3, 3, 27)]
+        [TestCase(10, -2, 0.01)]
+        public void power_factorAwithB_returnResult(int a, int b, double c)
         {
             //act
-            double res = testCalc.Power();
+            double res = testCalc.Power(a,b);
 
             //Assert
             Assert.That(testCalc.Accumulator, Is.EqualTo(c));

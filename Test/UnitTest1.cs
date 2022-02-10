@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using SWtest_calculator_EX;
 
@@ -12,6 +13,13 @@ namespace test
         {
             //arrange
             testCalc = new Calc();
+        }
+
+        [TestCase(10, 0)]
+        public void divide_divideByZero_returnThrows(int a, int b)
+        {
+            //Assert
+            Assert.That(() => testCalc.Divide(a,b), Throws.TypeOf<DivideByZeroException>());
         }
 
         [TestCase(4,2,2)]

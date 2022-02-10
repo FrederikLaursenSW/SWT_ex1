@@ -59,6 +59,11 @@ namespace SWtest_calculator_EX
 
         public double Divide(double dividend, double divisor)
         {
+            if (divisor == 0)
+            {
+                throw new DivideByZeroException();
+            }
+
             Accumulator = dividend / divisor;
 
             return Accumulator;

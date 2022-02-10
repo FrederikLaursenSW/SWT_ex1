@@ -19,9 +19,10 @@ namespace test
         [TestCase( -4,2,-2)]
         public void divide_twoNumbers_returnSum(int a, int b, double c)
         {
+            //act
             double res = testCalc.Divide(a, b);
 
-
+            //Assert
             Assert.That(res, Is.EqualTo(c));
         }
 
@@ -31,14 +32,11 @@ namespace test
         [TestCase(-7, -10, -17)]
         public void add_twoNumbers_returnSum(int a, int b, int c)
         {
-
             //act
             double res = testCalc.Add(a, b);
 
-
             //Assert
             Assert.That(res, Is.EqualTo(c));
-
         }
 
         [TestCase(5, 7, 12)]
@@ -53,7 +51,6 @@ namespace test
 
             //Assert
             Assert.That(testCalc.Accumulator, Is.EqualTo(c));
-
         }
 
 
@@ -63,12 +60,10 @@ namespace test
         public void multiply_TwoNumbers_returnResult(int a, int b, int c)
         {
             //act
+            double res1 = testCalc.Multiply(a, b);
 
-          double res1 = testCalc.Multiply(a, b);
-
-          //Assert
+            //Assert
             Assert.That(testCalc.Accumulator, Is.EqualTo(c));
-
         }
 
         [TestCase(10, 5, 5)]
@@ -82,9 +77,30 @@ namespace test
 
             //Assert
             Assert.That(testCalc.Accumulator, Is.EqualTo(c));
-
         }
 
+        [TestCase(10, 5, 5)]
+        [TestCase(7, 17, -10)]
+        [TestCase(-4, -5, 1)]
+        public void clear_resetAccumulator_returnZero()
+        {
+            //act
+            double res = testCalc.Clear();
 
+            //Assert
+            Assert.That(testCalc.Accumulator, Is.EqualTo(c));
+        }
+
+        [TestCase(10, 5, 5)]
+        [TestCase(7, 17, -10)]
+        [TestCase(-4, -5, 1)]
+        public void power_factorAwithB_returnResult()
+        {
+            //act
+            double res = testCalc.Power();
+
+            //Assert
+            Assert.That(testCalc.Accumulator, Is.EqualTo(c));
+        }
     }
 }

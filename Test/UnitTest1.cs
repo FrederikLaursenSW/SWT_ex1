@@ -45,5 +45,19 @@ namespace test
 
         }
 
+        [TestCase(10, 5, 5)]
+        [TestCase(7, 17, -10)]
+        [TestCase(-4, -5, 1)]
+
+        public void substract_oneNumberFromAnother_returnSum(int a, int b, int c)
+        {
+            //act
+            double res = testCalc.Subtract(a,b);
+
+            //Assert
+            Assert.That(testCalc.Accumulator, Is.EqualTo(c));
+
+        }
+
     }
 }

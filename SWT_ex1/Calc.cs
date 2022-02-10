@@ -37,14 +37,14 @@ namespace SWtest_calculator_EX
             return result;  
         }
 
-        public double Multipli(double a, double b)
+        public double Multiply(double a, double b)
         { 
             double result = 0;
             result = a * b;
 
             Accumulator = result;
             return result;
-            //test
+       
         }
 
         public double Power(double x, double exp)

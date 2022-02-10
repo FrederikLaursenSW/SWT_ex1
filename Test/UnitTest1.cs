@@ -14,6 +14,17 @@ namespace test
             testCalc = new Calc();
         }
 
+        [TestCase(4,2,2)]
+        [TestCase(3,6,0.5)]
+        [TestCase( -4,2,-2)]
+        public void divide_twoNumbers_returnSum(int a, int b, double c)
+        {
+            double res = testCalc.Divide(a, b);
+
+
+            Assert.That(res, Is.EqualTo(c));
+        }
+
         [TestCase(13,22,35)]
         [TestCase(2, 3, 5)]
         [TestCase(-10, -5, -15)]
@@ -45,19 +56,22 @@ namespace test
 
         }
 
-        [TestCase(10, 5, 5)]
-        [TestCase(7, 17, -10)]
-        [TestCase(-4, -5, 1)]
 
-        public void substract_oneNumberFromAnother_returnSum(int a, int b, int c)
+        [TestCase(5, 5, 25)]
+        [TestCase(-12, -10, 120)]
+        [TestCase(-5, 10, -50)]
+        public void multiply_TwoNumbers_returnResult(int a, int b, int c)
         {
             //act
-            double res = testCalc.Subtract(a,b);
+          //  double res1 = Multiply(double a, double b);
 
-            //Assert
+          double res1 = testCalc.Multiply(a, b);
+
+          //Assert
             Assert.That(testCalc.Accumulator, Is.EqualTo(c));
 
         }
+
 
 
 

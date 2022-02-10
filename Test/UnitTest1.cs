@@ -89,7 +89,7 @@ namespace test
             testCalc.Clear();
 
             //Assert
-            //Assert.That(testCalc.Accumulator, Is.EqualTo(c));
+            Assert.That(testCalc.Accumulator, Is.EqualTo(c));
         }
 
         [TestCase(2, 2, 4)]

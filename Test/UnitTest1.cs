@@ -14,6 +14,17 @@ namespace test
             testCalc = new Calc();
         }
 
+        [TestCase(4,2,2)]
+        [TestCase(3,6,0.5)]
+        [TestCase( -4,2,-2)]
+        public void divide_twoNumbers_returnSum(int a, int b, double c)
+        {
+            double res = testCalc.Divide(a, b);
+
+
+            Assert.That(res, Is.EqualTo(c));
+        }
+
         [TestCase(13,22,35)]
         [TestCase(2, 3, 5)]
         [TestCase(-10, -5, -15)]
